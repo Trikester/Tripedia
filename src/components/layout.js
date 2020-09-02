@@ -10,7 +10,44 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Footer from "./footer"
 import "./layout.css"
+import styled from "styled-components"
+import Img from "gatsby-image"
+
+const styledDiv = styled.div`
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify content: center;
+
+`
+const BgImg = styled(Img)`
+  position: fixed !important;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+`
+const StyledMain = styled.div`
+  color: rgba(255, 255, 255, 0.95);
+  display:flex;
+  flex-direction: column;
+  flex-grow: 1;  
+`
+const StyledContent = styled.div`
+  color: rgba(255, 255, 255, 0.95);
+  display:flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-right: 1.45rem;
+  margin-left: 1.45rem;
+  
+`
+const SideBar = styled.div`
+  width: 20%;
+`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -20,27 +57,29 @@ const Layout = ({ children }) => {
           title
         }
       }
+      placeholderImage: file(relativePath: { eq: "background.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 2560) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
 
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
-    </>
+   
+    <div>
+        
+        <BgImg fluid={data.placeholderImage.childImageSharp.fluid} />
+        <StyledMain>
+          <Header siteTitle={data.site.siteMetadata.title} />      
+          <StyledContent>{children}</StyledContent>
+          <Footer></Footer>
+        </StyledMain>
+     
+    </div>
+    
   )
 }
 
