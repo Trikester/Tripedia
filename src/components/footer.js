@@ -3,13 +3,11 @@ import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
 
-const styledFooter = styled.div`
-    margin: 50px;
-    position: absolute;
+const StyledFooter = styled.div`
     bottom: 0;
     width: 100%;
-    height: 2.5rem;
-    color: rgba(255, 255, 255, 0.95);
+    color: rgba(255, 255, 255, 0.95);s
+    background: #031f38;
 `
 /*
 style={{
@@ -28,6 +26,7 @@ const ContentContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: flex-start;
   padding: 10px;
 `
 const ImageContainer = styled.div`
@@ -67,18 +66,18 @@ const StyleA = styled.a`
 `
 
 const Footer =()=> (    
-        <styledFooter>
+        <StyledFooter>
             <ContentContainer>
             
                 <Title>
                     © {new Date().getFullYear()}, Made by
                     {` `}
-                    <StyleA href="https://github.com/Trikester">@Trikester</StyleA>
+                    <StyleA href="https://github.com/Trikester">@CraigPinchin</StyleA>
                 </Title>
                 
             
             </ContentContainer>
-        </styledFooter>
+        </StyledFooter>
     )
 
 

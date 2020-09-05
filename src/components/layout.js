@@ -43,10 +43,14 @@ const StyledContent = styled.div`
   flex-grow: 1;
   margin-right: 1.45rem;
   margin-left: 1.45rem;
-  
+  min-height: 80vh;
 `
 const SideBar = styled.div`
   width: 20%;
+`
+const StyledLayout = styled.div`
+  margin-bottom: 0;
+  height:100%;
 `
 
 const Layout = ({ children }) => {
@@ -67,9 +71,10 @@ const Layout = ({ children }) => {
     }
   `)
 
+
   return (
    
-    <div>
+    <StyledLayout>
         
         <BgImg fluid={data.placeholderImage.childImageSharp.fluid} />
         <StyledMain>
@@ -78,7 +83,7 @@ const Layout = ({ children }) => {
           <Footer></Footer>
         </StyledMain>
      
-    </div>
+    </StyledLayout>
     
   )
 }

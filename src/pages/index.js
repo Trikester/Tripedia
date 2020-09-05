@@ -11,6 +11,8 @@ const CenterDiv = styled.div`
   display:flex;
   flex-direction:row;
   justify-content:center;
+  display: flex;
+  flex-grow: 1;
   
 `
 const ContentContainer = styled.div`
@@ -23,11 +25,12 @@ const IndexPage = () => (
       <SEO title="Home" />
     <CenterDiv>
       <ContentContainer>
-        <h1>Hi people</h1>
-        <p>Now go build something great.</p>
-        <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-          <Image />
-        </div>
+        <h1>Gatsby js</h1>
+        <p>A website framework built using react</p>
+
+        
+       
+
         <Link to="/page-2/">Go to page 2</Link> <br />
         <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
       </ContentContainer>
@@ -37,3 +40,5 @@ const IndexPage = () => (
 )
 
 export default IndexPage
+
+//<div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}><Image /></div>

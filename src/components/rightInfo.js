@@ -23,11 +23,11 @@ const Infopic = styled.img`
     object-fit: cover;
     max-width:80%;
     max-height:80%;
-    margin-bottom: 0;
+    margin-bottom: 1.45rem;
 `
 const ImageBox = styled.div`
     display: flex;
-    flex-direction:row;
+    flex-direction:column;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -41,8 +41,8 @@ const ImageBox = styled.div`
 const InfoBar =()=> (  
     <StyledDiv>
         <ContentContainer>
-            <ImageBox><Infopic src={cool}></Infopic></ImageBox>
-            <div>hahaha talking about stuff</div>
+            <ImageBox><Infopic src={cool}></Infopic> The Gatsby Icon</ImageBox>
+            <div>Side bar info</div>
         </ContentContainer>
     </StyledDiv>
 )
