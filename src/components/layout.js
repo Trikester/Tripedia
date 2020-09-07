@@ -15,13 +15,7 @@ import "./layout.css"
 import styled from "styled-components"
 import Img from "gatsby-image"
 
-const styledDiv = styled.div`
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  justify content: center;
 
-`
 const BgImg = styled(Img)`
   position: fixed !important;
   width: 100%;
@@ -34,7 +28,6 @@ const StyledMain = styled.div`
   color: rgba(255, 255, 255, 0.95);
   display:flex;
   flex-direction: column;
-  flex-grow: 1;  
 `
 const StyledContent = styled.div`
   color: rgba(255, 255, 255, 0.95);
@@ -43,7 +36,7 @@ const StyledContent = styled.div`
   flex-grow: 1;
   margin-right: 1.45rem;
   margin-left: 1.45rem;
-  min-height: 80vh;
+  max-height: 80vh;
 `
 const SideBar = styled.div`
   width: 20%;

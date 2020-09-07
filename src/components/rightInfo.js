@@ -17,6 +17,7 @@ const ContentContainer = styled.div`
     justify-content: flex-start;
     align-items: center;
     align-content: stretch;
+    padding-bottom: 1.45rem;
 `
 
 const Infopic = styled.img`
@@ -43,6 +44,18 @@ const InfoBar =()=> (
         <ContentContainer>
             <ImageBox><Infopic src={cool}></Infopic> The Gatsby Icon</ImageBox>
             <div>Side bar info</div>
+            <div>Side bar info</div>
+            <div>Side bar info</div>
+            <div>Side bar info</div>
+            <div>Side bar info</div>
+            <div>Side bar info</div>
+            <div>Side bar info</div>
+            <div>Side bar info</div>
+            <div>Side bar info</div>
+            <div>Side bar info</div>
+            <div>Side bar info</div>
+            <div>Side bar info</div>
+
         </ContentContainer>
     </StyledDiv>
 )

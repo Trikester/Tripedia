@@ -4,23 +4,15 @@ import React from "react"
 import styled from "styled-components"
 
 const StyledFooter = styled.div`
+    position: fixed;
+    left: 0;
     bottom: 0;
     width: 100%;
-    color: rgba(255, 255, 255, 0.95);s
-    background: #031f38;
-`
-/*
-style={{
-              color: `white`,
-              textDecoration: `none`,
-            }}
-*/
-const StyledDiv =styled.div`
-  Width: 100%;
-  Height 20%;
-  
-  background: rgba(58, 86, 102, 0.8);
-  border-radius: 8px;
+    height: 5vh;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
 `
 const ContentContainer = styled.div`
   display: flex;
@@ -28,31 +20,16 @@ const ContentContainer = styled.div`
   align-items: center;
   justify-content: flex-start;
   padding: 10px;
-`
-const ImageContainer = styled.div`
-  Width:50px;
-  Height:50px;
-  margin: 10px;
-  -webkit-user-select:none;
-  -khtml-user-select:none;
-  -moz-user-select:none;
-  -ms-user-select:none;
-  -o-user-select:none;
-  user-select:none;
-`
-const WebIcon = styled.img`
-  height:100%;
-  width:100%;
-  background: rgba(255,255,255, 0.2);
-  border-radius: 10%;
-  padding: 2px;
+  width: 100%;
+  height: 100%;
 `
 const Title = styled.h1`
-  font-weight: 525;
-  font-size: 1em;
+  font-weight: 350;
+  font-size: 0.9em;
+  margin-bottom: 0;
 
   color: rgba(255, 255, 255, 0.95);
-  text-shadow: 0px 0px 10px rgba(138, 185, 210, 0.57);
+  text-shadow: 0px 0px 10px rgba(138, 185, 210, 0.2);
   -webkit-user-select:none;
   -khtml-user-select:none;
   -moz-user-select:none;
