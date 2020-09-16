@@ -6,6 +6,7 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import Infobar from "../components/rightInfo"
+import ContentNavigator from "../components/contentNavigator"
 
 const CenterDiv = styled.div`
   display:flex;
@@ -27,7 +28,7 @@ const IndexPage = () => (
       <ContentContainer>
         <h1>Gatsby js</h1>
         <p>A website framework built using react</p>
-
+        <ContentNavigator title = "Gatsby" title1 = "Please"></ContentNavigator>
         
        
 
